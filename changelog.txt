@@ -1,6 +1,10 @@
 Prologue Theme - Change Log
 ---------------------------
 
+1.5.0 - ????
+- Update image references to HTTPS
+
+
 1.4.2 - 17 Sept 2008
 - Change Next/Prev links to read "Older/Newer Posts"
 - Adjusted font size in sidebar for better formatting

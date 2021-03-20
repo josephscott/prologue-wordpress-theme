@@ -178,7 +178,7 @@ function prologue_admin_header_style( ) {
 add_custom_image_header( '', 'prologue_admin_header_style' );
 
 
-function prologue_get_avatar( $wpcom_user_id, $email, $size, $rating = '', $default = 'http://s.wordpress.com/i/mu.gif' ) {
+function prologue_get_avatar( $wpcom_user_id, $email, $size, $rating = '', $default = 'https://s.wordpress.com/i/mu.gif' ) {
 	if( !empty( $wpcom_user_id ) && $wpcom_user_id !== false && function_exists( 'get_avatar' ) ) {
 		return get_avatar( $wpcom_user_id, $size );
 	}
