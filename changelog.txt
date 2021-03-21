@@ -6,6 +6,7 @@ Prologue Theme - Change Log
 - Remove prologue_get_avatar()
 - Update customer header support
 - Update register_sidebar() call
+- Replace get_the_author_ID() calls with get_the_author_meta( 'ID' )
 
 
 1.4.2 - 17 Sept 2008

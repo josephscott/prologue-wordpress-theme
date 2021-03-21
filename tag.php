@@ -19,7 +19,7 @@ if( have_posts( ) ) {
 
 <?php
 		// Don't show the avatar if the previous post was by the same user
-		$current_user_id = get_the_author_ID( );
+		$current_user_id = get_the_author_meta( 'ID' );
 		if( $previous_user_id !== $current_user_id ) {
 			echo get_avatar( get_the_author_email( ), 48 );
 		}

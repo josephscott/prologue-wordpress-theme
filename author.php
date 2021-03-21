@@ -14,10 +14,10 @@ if( have_posts( ) ) {
 
 		$author_feed_url = '';
 		if( function_exists( 'get_author_feed_link' ) ) {
-			$author_feed_url = get_author_feed_link( get_the_author_ID( ) );
+			$author_feed_url = get_author_feed_link( get_the_author_meta( 'ID' ) );
 		}
 		else {
-			$author_feed_url = get_author_rss_link( false, get_the_author_ID( ), get_the_author_nickname( ) );
+			$author_feed_url = get_author_rss_link( false, get_the_author_meta( 'ID' ), get_the_author_nickname( ) );
 		}
 ?>
 
