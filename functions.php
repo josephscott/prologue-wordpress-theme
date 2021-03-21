@@ -213,9 +213,9 @@ function prologue_comment_noreply($comment, $args, $depth) {
 function prologue_comment_fields($fields) {
 	$comment_field = '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>';
 
-	$fields['author'] = '<p class="comment-form-author">' . '<label for="author">' . __( 'Name (required)' ) . '</label><input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>';
+#	$fields['author'] = '<p class="comment-form-author">' . '<label for="author">' . __( 'Name (required)' ) . '</label><input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>';
 
-	$fields['email'] = '<p class="comment-form-email"><label for="email">' . __( 'Email (required)' ) . '</label><input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>';
+#	$fields['email'] = '<p class="comment-form-email"><label for="email">' . __( 'Email (required)' ) . '</label><input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>';
 
 	array_unshift( $fields, $comment_field );
 
