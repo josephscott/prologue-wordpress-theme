@@ -7,6 +7,7 @@ Prologue Theme - Change Log
 - Update customer header support
 - Update register_sidebar() call
 - Replace get_the_author_ID() calls with get_the_author_meta( 'ID' )
+- Replace get_the_author_email() calls with get_the_author_meta( 'email' )
 
 
 1.4.2 - 17 Sept 2008

@@ -7,7 +7,7 @@ if( have_posts( ) ) {
 	while( have_posts( ) ) {
 		the_post( );
 
-		$email_md5		= md5( strtolower( get_the_author_email() ) );
+		$email_md5		= md5( strtolower( get_the_author_meta( 'email' ) ) );
 		$default_img	= urlencode( 'http://use.perl.org/images/pix.gif' );
 ?>
 
