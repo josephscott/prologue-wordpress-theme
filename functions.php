@@ -175,7 +175,7 @@ function prologue_admin_header_style( ) {
 </style>
 <?php
 }
-add_custom_image_header( '', 'prologue_admin_header_style' );
+add_theme_support( 'custom-header' );
 
 
 function prologue_comment($comment, $args, $depth) {
