@@ -8,7 +8,7 @@ $first_name		= esc_attr( $user->first_name );
 		<input type="hidden" name="action" value="post" />
 		<?php wp_nonce_field( 'new-post' ); ?>
 
-		<?php echo prologue_get_avatar( $user->ID, $user->user_email, 48 ); ?>
+		<?php echo get_avatar( $user->user_email, 48 ); ?>
 
 		<label for="posttext">Hi, <?php echo $first_name; ?>. Whatcha up to?</label>
 		<textarea name="posttext" id="posttext" rows="3" cols="60"></textarea>

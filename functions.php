@@ -178,35 +178,12 @@ function prologue_admin_header_style( ) {
 add_custom_image_header( '', 'prologue_admin_header_style' );
 
 
-function prologue_get_avatar( $wpcom_user_id, $email, $size, $rating = '', $default = 'https://s.wordpress.com/i/mu.gif' ) {
-	if( !empty( $wpcom_user_id ) && $wpcom_user_id !== false && function_exists( 'get_avatar' ) ) {
-		return get_avatar( $wpcom_user_id, $size );
-	}
-	elseif( !empty( $email ) && $email !== false ) {
-		$default = urlencode( $default );
-
-		$out = 'http://www.gravatar.com/avatar.php?gravatar_id=';
-		$out .= md5( $email );
-		$out .= "&amp;size={$size}";
-		$out .= "&amp;default={$default}";
-
-		if( !empty( $rating ) ) {
-			$out .= "&amp;rating={$rating}";
-		}
-
-		return "<img alt='' src='{$out}' class='avatar avatar-{$size}' height='{$size}' width='{$size}' />";
-	}
-	else {
-		return "<img alt='' src='{$default}' />";
-	}
-}
-
 function prologue_comment($comment, $args, $depth) {
 	$GLOBALS['comment'] = $comment;
 ?>
 <li <?php comment_class(); ?> id="comment-<?php comment_ID( ); ?>">
 	<div id="div-comment-<?php comment_ID() ?>">
-	<?php echo prologue_get_avatar( $comment->user_id, $comment->comment_author_email, 32 ); ?>
+	<?php echo get_avatar( $comment->comment_author_email, 32 ); ?>
 	<h4>
 		<?php comment_author_link( ); ?>
 		<span class="meta"><?php comment_time( ); ?> on <?php comment_date( ); ?> | <a href="#comment-<?php comment_ID( ); ?>">#</a><?php echo comment_reply_link(array('add_below' => 'div-comment', 'depth' => $depth, 'max_depth' => $args['max_depth'], 'before' => ' | ')) ?><?php edit_comment_link( __( 'e' ), ' | ',''); ?></span>
@@ -221,7 +198,7 @@ function prologue_comment_noreply($comment, $args, $depth) {
 	$GLOBALS['comment'] = $comment;
 ?>
 <li <?php comment_class(); ?> id="comment-<?php comment_ID( ); ?>">
-	<?php echo prologue_get_avatar( $comment->user_id, $comment->comment_author_email, 32 ); ?>
+	<?php echo get_avatar( $comment->comment_author_email, 32 ); ?>
 	<h4>
 		<?php comment_author_link( ); ?>
 		<span class="meta"><?php comment_time( ); ?> on <?php comment_date( ); ?> | <a href="#comment-<?php comment_ID( ); ?>">#</a> <?php edit_comment_link( __( 'e' ), '&nbsp;|&nbsp;',''); ?></span>

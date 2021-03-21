@@ -1,8 +1,9 @@
 Prologue Theme - Change Log
 ---------------------------
 
-1.5.0 - ????
-- Update image references to HTTPS
+2.0.0 - ????
+- Replace prologue_get_avatar() with get_avatar()
+- Remove prologue_get_avatar()
 
 
 1.4.2 - 17 Sept 2008
