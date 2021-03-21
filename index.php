@@ -51,7 +51,7 @@ if( have_posts( ) ) {
 		the_post( );
 ?>
 
-<li id="prologue-<?php the_ID(); ?>" class="user_id_<?php the_author_ID( ); ?>">
+<li id="prologue-<?php the_ID(); ?>" class="user_id_<?php the_author_meta( 'ID' ) ?>">
 
 <?php
 		// Don't show the avatar if the previous post was by the same user
