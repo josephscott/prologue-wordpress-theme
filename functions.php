@@ -152,8 +152,10 @@ function load_javascript( ) {
 }
 add_action( 'wp_print_scripts', 'load_javascript' );
 
-if( function_exists('register_sidebar') )
-	register_sidebar();
+register_sidebar( [
+	'name' => 'Sidebar 1',
+	'id' => 'sidebar-1'
+] );
 
 
 define('HEADER_TEXTCOLOR', '');

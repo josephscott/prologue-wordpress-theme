@@ -5,6 +5,7 @@ Prologue Theme - Change Log
 - Replace prologue_get_avatar() with get_avatar()
 - Remove prologue_get_avatar()
 - Update customer header support
+- Update register_sidebar() call
 
 
 1.4.2 - 17 Sept 2008
